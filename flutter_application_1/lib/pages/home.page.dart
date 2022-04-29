@@ -78,7 +78,7 @@ Widget cardItem(){
         Container(
           padding: EdgeInsets.all(10),
           child: Text(
-            "Hunters faces the fierce Glavenus on the Guided Lands",
+            "Hunters face the fierce Glavenus on the Guided Lands",
           ),
         ),
      ],
