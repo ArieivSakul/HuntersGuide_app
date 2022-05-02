@@ -1,10 +1,18 @@
-// ignore_for_file: prefer_const_constructors, unnecessary_new, unnecessary_const, prefer_const_literals_to_create_immutables, duplicate_ignore, use_key_in_widget_constructors, deprecated_member_use
+// ignore_for_file: prefer_const_constructors, unnecessary_new, unnecessary_const, prefer_const_literals_to_create_immutables, duplicate_ignore, use_key_in_widget_constructors, deprecated_member_use, must_be_immutable
 
 import 'package:flutter/material.dart';
 
 class SignupPage extends StatelessWidget {
+  // ignore: prefer_typing_uninitialized_variables
+  var size, height, width;
+
   @override
   Widget build(BuildContext context) {
+
+    size = MediaQuery.of(context).size;
+    height = size.height;
+    width = size.width;
+
     return Scaffold(
       body: Container(
         padding: EdgeInsets.only(top: 10, left: 40, right: 40),
@@ -12,8 +20,8 @@ class SignupPage extends StatelessWidget {
         child: ListView(
           children: <Widget>[
             Container(
-              width: 200,
-              height: 200,
+              width: 200/2,
+              height: 200/2,
               alignment: Alignment(0.0, 1.15),
               decoration: new BoxDecoration(
                 image: new DecorationImage(
@@ -22,8 +30,8 @@ class SignupPage extends StatelessWidget {
                 ),
               ),
               child: Container(
-                height: 56,
-                width: 56,
+                height: 56/2,
+                width: 56/2,
                 alignment: Alignment.center,
                 decoration: BoxDecoration(
                   gradient: LinearGradient(

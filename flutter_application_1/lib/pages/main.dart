@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       title: 'Proof of a Hunter',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primarySwatch: Colors.green),
-      home: const LoginPage(),
+      home: LoginPage(),
     );
   }
 }

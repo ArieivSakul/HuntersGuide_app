@@ -1,11 +1,18 @@
-// ignore_for_file: deprecated_member_use, prefer_const_constructors, prefer_const_literals_to_create_immutables, duplicate_ignore
+// ignore_for_file: deprecated_member_use, prefer_const_constructors, prefer_const_literals_to_create_immutables, duplicate_ignore, must_be_immutable
 
 import 'package:flutter/material.dart';
 
 // ignore: use_key_in_widget_constructors
 class ResetPasswordPage extends StatelessWidget {
+  // ignore: prefer_typing_uninitialized_variables
+  var size, height, width;
+
   @override
   Widget build(BuildContext context) {
+    size = MediaQuery.of(context).size;
+    height = size.height;
+    width = size.width;
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
@@ -17,9 +24,9 @@ class ResetPasswordPage extends StatelessWidget {
       ),
       body: Container(
         padding: const EdgeInsets.only(
-          top: 60,
-          left: 40,
-          right: 40,
+          top: 60/2,
+          left: 40/2,
+          right: 40/2,
         ),
         color: const Color(0xFFB8EBD2),
         child: ListView(
@@ -88,9 +95,9 @@ class ResetPasswordPage extends StatelessWidget {
                   Radius.circular(5),
                 ),
               ),
-              child:  SizedBox.expand(
+              child: SizedBox.expand(
                 child: FlatButton(
-                  onPressed: () {  },
+                  onPressed: () {},
                   child: Text(
                     "Enviar",
                     style: TextStyle(
@@ -100,7 +107,6 @@ class ResetPasswordPage extends StatelessWidget {
                     ),
                     textAlign: TextAlign.center,
                   ),
-                 
                 ),
               ),
             ),
