@@ -1,7 +1,7 @@
 // ignore_for_file: deprecated_member_use, prefer_const_constructors, avoid_unnecessary_containers, sized_box_for_whitespace, use_key_in_widget_constructors, must_be_immutable
 
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/pages/home.page.dart';
+import 'package:flutter_application_1/pages/myhome.page.dart';
 import 'package:flutter_application_1/pages/reset-password.page.dart';
 import 'package:flutter_application_1/pages/signup.page.dart';
 
@@ -133,7 +133,7 @@ class LoginPage extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(
                       context,
-                       MaterialPageRoute(builder: (context) => HomePage()),
+                       MaterialPageRoute(builder: (context) => MyHomePage()),
                        );
                   },
                 ),
