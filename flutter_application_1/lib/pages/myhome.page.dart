@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, unnecessary_new, deprecated_member_use, avoid_unnecessary_containers
+// ignore_for_file: prefer_const_constructors, unnecessary_new, deprecated_member_use, avoid_unnecessary_containers, sized_box_for_whitespace, dead_code
 
 import 'package:flutter/material.dart';
 
@@ -10,15 +10,17 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  
   String dropdownvalue = 'Menu:';
 
   // Lista de itens do menu
   var items = [
+    'Menu:',
     'Monstros Grandes',
     'Monstros Pequenos',
     'Dragões Anciões',
   ];
+
+  get body => null;
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +44,6 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ),
         actions: <Widget>[
-          // ignore: sized_box_for_whitespace
           Container(
             width: 60,
             child: FlatButton(
@@ -55,46 +56,32 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ],
       ),
-      body: Container(
-        color: Color(0xFFF2F3F6),
-        child: ListView(
-          children: <Widget>[
-            cardItem(),
-            cardItem(),
-            cardItem(),
-            cardItem(),
-            cardItem(),
-            cardItem(),
+        body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            DropdownButton(
+              // valor inicial
+              value: dropdownvalue,
+
+              // icone de menu arrastavel
+              icon: const Icon(Icons.keyboard_arrow_down),
+
+              // Array list
+              items: items.map((String items) {
+                return DropdownMenuItem(
+                  value: items,
+                  child: Text(items),
+                );
+              }).toList(),
+              onChanged: (String? newValue) {
+                setState(() {
+                  dropdownvalue = newValue!;
+                });
+              },
+            ),
           ],
         ),
-      ),
-    );
-  }
-
-  Widget cardItem() {
-    return Card(
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        // ignore: prefer_const_literals_to_create_immutables
-        children: <Widget>[
-          const ListTile(
-            leading: CircleAvatar(
-              backgroundImage: AssetImage("user-picture.png"),
-            ),
-            title: Text("Caçador"),
-            subtitle: Text("03/05/2022 19:56"),
-            trailing: Icon(Icons.more_vert),
-          ),
-          Container(
-            child: Image.asset("assets/monster wallpaper 29.jpg"),
-          ),
-          Container(
-            padding: EdgeInsets.all(10),
-            child: Text(
-              "Hunters face the fierce Glavenus on the Guided Lands",
-            ),
-          ),
-        ],
       ),
     );
   }
