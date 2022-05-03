@@ -20,13 +20,6 @@ class LoginPage extends StatelessWidget {
 
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage("assets/monster_hunter_wall.png"),
-            fit: BoxFit.cover,
-            colorFilter: ColorFilter.mode(Colors.black45, BlendMode.darken)
-          ),
-        ),
         padding: const EdgeInsets.only(
           top: 60/2,
           left: 30/2,
