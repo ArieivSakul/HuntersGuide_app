@@ -16,8 +16,7 @@ class _MyHomePageState extends State<MyHomePage> {
   var items = [
     'Menu:',
     'Monstros Grandes',
-    'Monstros Pequenos',
-    'Dragões Anciões',
+    'Monstros Pequenos'
   ];
 
   get body => null;
