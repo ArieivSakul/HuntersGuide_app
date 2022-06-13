@@ -100,3 +100,10 @@ flutter:
   - monsterhunter.png
   - monster wallpaper 29.jpg
   - monster_hunter_wall.png
+
+dependencias:
+     flutter pub add cloud_firestore
+     flutter pub add firebase_core
+     flutter pub add firebase_auth
+
+ 
