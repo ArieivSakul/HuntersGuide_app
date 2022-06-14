@@ -13,11 +13,7 @@ class _MyHomePageState extends State<MyHomePage> {
   String dropdownvalue = 'Menu:';
 
   // Lista de itens do menu
-  var items = [
-    'Menu:',
-    'Monstros Grandes',
-    'Monstros Pequenos'
-  ];
+  var items = ['Menu:', 'Monstros Grandes', 'Monstros Pequenos', 'Sobre'];
 
   get body => null;
 
@@ -55,7 +51,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ],
       ),
-        body: Center(
+      body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
