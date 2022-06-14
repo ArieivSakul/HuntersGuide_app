@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../firebase_options.dart';
-import 'login.page.dart';
+import 'firebase_options.dart';
+import 'pages/login.page.dart';
 
 import 'package:firebase_core/firebase_core.dart';
 

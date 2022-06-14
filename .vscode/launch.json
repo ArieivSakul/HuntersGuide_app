@@ -5,27 +5,22 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "flutter_application_1",
-            "cwd": "flutter_application_1",
+            "name": "huntersguide",
             "request": "launch",
-            "type": "dart",
-            //"args": ["--enable-software-rendering"]
-            //"flutterMode":"profile", //debug //release
-            "program": "lib/pages/main.dart",
+            "type": "dart"
         },
         {
-            "name": "flutter_application_1 (profile mode)",
-            "cwd": "flutter_application_1",
+            "name": "huntersguide (profile mode)",
             "request": "launch",
             "type": "dart",
             "flutterMode": "profile"
         },
         {
-            "name": "flutter_application_1 (release mode)",
-            "cwd": "flutter_application_1",
+            "name": "huntersguide (release mode)",
             "request": "launch",
             "type": "dart",
             "flutterMode": "release"
         }
+
     ]
 }
